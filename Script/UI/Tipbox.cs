@@ -11,17 +11,23 @@ namespace VArch.SDK.Geometry
         private GameObject tipboxUI;
 
         [SerializeField]
-        private GameObject player;
-
-        [SerializeField]
         private bool displayFromDistance;
 
         [SerializeField]
         private float displayDistance;
 
+        private GameObject player;
+
         // Start is called before the first frame update
         void Start()
         {
+            player = GameObject.FindGameObjectWithTag("Player");
+
+            if (!player)
+            {
+                throw new MissingReferenceException("Object with tag Player not found");
+            }
+
             DisplayTipbox(false);
         }
 
