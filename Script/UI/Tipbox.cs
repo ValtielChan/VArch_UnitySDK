@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VArch.SDK.Geometry;
 using VArch.SDK.Utility;
 
-namespace VArch.SDK.Geometry
+namespace VArch.SDK.UI
 {
     public class Tipbox : MonoBehaviour
     {
